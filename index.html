@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="game__header">
+      <p class="eyebrow">Classic board game</p>
+      <h1>Tic Tac Toe</h1>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-card score-card--x" id="scoreX">
+        <span class="score-card__mark">X</span>
+        <div>
+          <span class="score-card__label">Player 1</span>
+          <strong class="score-card__value" id="scoreXValue">0</strong>
+        </div>
+      </div>
+      <div class="score-card score-card--tie">
+        <span class="score-card__mark">—</span>
+        <div>
+          <span class="score-card__label">Ties</span>
+          <strong class="score-card__value" id="scoreTieValue">0</strong>
+        </div>
+      </div>
+      <div class="score-card score-card--o" id="scoreO">
+        <span class="score-card__mark">O</span>
+        <div>
+          <span class="score-card__label">Player 2</span>
+          <strong class="score-card__value" id="scoreOValue">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <p class="status" id="status" aria-live="polite">Player X's turn</p>
+
+    <div class="board" id="board" role="grid" aria-label="Tic tac toe board">
+      <button class="cell" role="gridcell" aria-label="Top left" data-index="0"></button>
+      <button class="cell" role="gridcell" aria-label="Top center" data-index="1"></button>
+      <button class="cell" role="gridcell" aria-label="Top right" data-index="2"></button>
+      <button class="cell" role="gridcell" aria-label="Middle left" data-index="3"></button>
+      <button class="cell" role="gridcell" aria-label="Middle center" data-index="4"></button>
+      <button class="cell" role="gridcell" aria-label="Middle right" data-index="5"></button>
+      <button class="cell" role="gridcell" aria-label="Bottom left" data-index="6"></button>
+      <button class="cell" role="gridcell" aria-label="Bottom center" data-index="7"></button>
+      <button class="cell" role="gridcell" aria-label="Bottom right" data-index="8"></button>
+    </div>
+
+    <button class="reset-button" id="resetButton" type="button">
+      <span aria-hidden="true">↻</span>
+      New round
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
